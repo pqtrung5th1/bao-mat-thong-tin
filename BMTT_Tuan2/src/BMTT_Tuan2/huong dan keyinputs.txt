@@ -1,0 +1,1 @@
+﻿nhập số key phải từ 32 bit cho thuật toán DES
