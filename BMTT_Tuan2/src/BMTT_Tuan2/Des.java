@@ -233,17 +233,17 @@ public class Des extends javax.swing.JFrame {
         {
             String key = this.txtKey.getText();
             String banro = this.txtPlainText.getText();
-            File f = new File("E:\\Des.txt");
+            File f = new File("C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\Des.txt");
             FileWriter fw = new FileWriter(f);
             fw.write(banro);
             fw.close();
 
-            FileInputStream fis = new FileInputStream("E:\\Des.txt");
-            FileOutputStream fos = new FileOutputStream("E:\\EnDes.txt");
+            FileInputStream fis = new FileInputStream("C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\Des.txt");
+            FileOutputStream fos = new FileOutputStream("C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\EnDes.txt");
             encrypt(key, fis, fos);
             
             BufferedReader br = null;
-            br = new BufferedReader(new FileReader("E:\\EnDes.txt"));
+            br = new BufferedReader(new FileReader("C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\EnDes.txt"));
             StringBuffer sb = new StringBuffer();
             
             char[] ca = new char[5];
@@ -274,11 +274,11 @@ public class Des extends javax.swing.JFrame {
         try
         {
             String key = txtKey.getText();
-            fis2 = new FileInputStream("E:\\EnDes.txt");
-            FileOutputStream fos2 = new FileOutputStream("E:\\DeDes.txt");
+            fis2 = new FileInputStream("C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\EnDes.txt");
+            FileOutputStream fos2 = new FileOutputStream("C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\DeDes.txt");
             decrypt(key, fis2, fos2);
             BufferedReader br = null;
-            br = new BufferedReader(new FileReader("E:\\DeDes.txt"));
+            br = new BufferedReader(new FileReader("C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\DeDes.txt"));
             StringBuffer sb = new StringBuffer();
              
             char[] ca = new char[5];
@@ -306,7 +306,7 @@ public class Des extends javax.swing.JFrame {
         // TODO add your handling code here:
         try{
              BufferedWriter bw = null;
-            String fileName = "E:\\Des.txt";
+            String fileName = "C:\\Users\\Admin\\Documents\\NetBeansProjects\\QLBN\\Des.txt";
             String s = txtPlainText.getText();
             bw = new BufferedWriter(new FileWriter(fileName));
             StringBuffer sb = new StringBuffer();
